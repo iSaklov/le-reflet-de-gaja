@@ -7,11 +7,21 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      display: 'var(--display-font)',
+      body: 'var(--body-font)',
+      cursive: 'var(--cursive-font)',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gaja-gradient': 'linear-gradient(0deg, #470960, #7C2248 50%, #470960)',
+      },
+      colors: {
+        'deep-purple': '#470960',
+        'burgundy-sunset': '#7C2248',
       },
     },
   },
