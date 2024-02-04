@@ -26,23 +26,28 @@ const annie_use_your_telescope = Annie_Use_Your_Telescope({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio réalisé par iSac - Concepteur Développeur d'Applications",
+  title:
+    'Le Reflet de Gaja - Massage Bien-Être à Domicile | Rambouillet, Chartres, Dreux',
   description:
-    "Actuellement en recherche d'une alternance et disponible dès maintenant. Je suis à la recherche d'une entreprise qui me permettra de mettre en pratique mes compétences full stack en JavaScript & TypeScript et d'en acquérir de nouvelles. Localisation : Eure-et-Loir, Région Centre-Val de Loire, ou partout en Île-de-France, notamment à Paris. Mon site portfolio a été réalisé avec Next.js, Tailwind CSS, Airtable et déployé sur Vercel.",
+    'Découvrez Le Reflet de Gaja, où votre bien-être est notre priorité. Offrant une variété de massages bien-être à domicile dans la région de Rambouillet, Chartres, Dreux, et leurs environs. Planifiez votre session de relaxation dès aujourd&apos;hui.',
   keywords: [
-    'iSac',
-    'portfolio',
-    'alternance',
-    'développeur',
-    'web',
-    'full stack',
-    'JavaScript',
-    'TypeScript',
-    'Next.js',
-    'Tailwind CSS',
-    'Material UI',
-    'Airtable',
-    'Vercel',
+    'Le Reflet de Gaja',
+    'massage bien-être à domicile',
+    'massage Rambouillet',
+    'massage Chartres',
+    'massage Dreux',
+    'massage bien-être',
+    'massage Californien',
+    'massage Kobido',
+    'massage Lomi-Lomi',
+    'massage Ayurvédique',
+    'réflexologie plantaire thaï',
+    'massage Suédois',
+    'massage Balinais',
+    'massage femme enceinte',
+    'bien-être à domicile',
+    'relaxation à domicile',
+    'services de massage',
   ],
   robots: 'index, follow',
 }
