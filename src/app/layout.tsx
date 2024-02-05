@@ -14,7 +14,7 @@ const antic_didone = Antic_Didone({
 })
 
 const rajdhani = Rajdhani({
-  weight: '400',
+  weight: ['400', '600', '700'],
   variable: '--body-font',
   subsets: ['latin'],
 })
