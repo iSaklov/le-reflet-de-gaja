@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import ServicesListModal from '@/components/dev-placeholder/ServicesListModal'
 import Logo from '@/assets/images/logo_home.svg'
 import Gaja from '@/assets/images/logo_gaja.svg'
 import Developer from '@/assets/images/icons/material-symbols-light_developer-board-sharp.svg'
@@ -13,13 +14,13 @@ import Zone from '@/assets/images/icons/mdi_timezone.svg'
 
 export default function Home() {
   return (
-    <div className='font-body container mx-auto flex min-h-screen flex-col items-center justify-start gap-y-6 bg-gaja-gradient px-5 py-10'>
-      <header>
+    <div className='font-body flex min-h-screen flex-col items-center justify-start gap-y-6 bg-gaja-gradient px-5 py-10'>
+      <header className='container mx-auto flex justify-center'>
         <Image src={Logo} alt='Logo le Reflet de Gaja' width={320} />
       </header>
-      <main>
-        <section className='text-justify text-deep-purple md:flex md:flex-wrap '>
-          <article className='__responsive-bg-checker flex-start hidden h-80 flex-col items-center justify-center gap-y-4 px-16 py-6 md:flex md:w-1/2 xl:w-1/3'>
+      <main className='container mx-auto'>
+        <section className='grid grid-cols-1 text-justify text-deep-purple md:grid-cols-2 xl:grid-cols-3'>
+          <article className='__responsive-bg-checker hidden flex-col items-center justify-start gap-y-4 px-16 py-6 md:flex'>
             <Image src={Developer} alt='' width={48} height={48} />
             <h2 className='text-lg font-bold'>Veuillez patienter</h2>
             <p>
@@ -27,7 +28,7 @@ export default function Home() {
               disponible très bientôt. Merci pour votre patience.
             </p>
           </article>
-          <article className='__responsive-bg-checker flex-start flex h-80 flex-col items-center justify-center gap-y-4 px-16 py-6 md:w-1/2 xl:w-1/3'>
+          <article className='__responsive-bg-checker flex flex-col items-center justify-start gap-y-4 px-16 py-6'>
             <Image src={Welcome} alt='' width={48} height={48} />
             <h2 className='text-lg font-bold'>Bienvenue</h2>
             <p>
@@ -36,7 +37,7 @@ export default function Home() {
               de votre foyer.
             </p>
           </article>
-          <article className='__responsive-bg-checker flex-start flex h-80 flex-col items-center justify-center gap-y-4 px-16 py-6 md:w-1/2 xl:w-1/3'>
+          <article className='__responsive-bg-checker flex flex-col items-center justify-start gap-y-4 px-16 py-6'>
             <Image src={Phone} alt='' width={48} height={48} />
             <h2 className='text-lg font-bold'>Prenez rendez-vous</h2>
             <p>
@@ -47,12 +48,12 @@ export default function Home() {
               </a>
             </p>
           </article>
-          <article className='__responsive-bg-checker flex-start flex h-80 flex-col items-center justify-center gap-y-4 px-16 py-6 md:w-1/2 xl:w-1/3'>
+          <article className='__responsive-bg-checker flex flex-col items-center justify-start gap-y-4 px-16 py-6'>
             <Image src={FollowUs} alt='' width={48} height={48} />
             <h2 className='text-lg font-bold'>Suivez-nous</h2>
             <p>
               Restez informé(e) de nos dernières actualités et offres exclusives
-              en nous suivant sur nos réseaux sociaux :
+              en nous suivant sur nos réseaux sociaux:
             </p>
             <div className='flex items-center justify-center gap-x-10'>
               <a
@@ -73,7 +74,7 @@ export default function Home() {
               </a>
             </div>
           </article>
-          <article className='__responsive-bg-checker flex-start flex h-80 flex-col items-center justify-center gap-y-4 px-16 py-6 md:w-1/2 xl:w-1/3'>
+          <article className='__responsive-bg-checker flex flex-col items-center justify-start gap-y-4 px-16 py-6'>
             <Image src={Massage} alt='' width={48} height={48} />
             <h2 className='text-lg font-bold'>Nos massages</h2>
             <p>
@@ -82,19 +83,23 @@ export default function Home() {
               avec Le Reflet de Gaja.
             </p>
             <div className='relative flex items-center justify-center'>
-              <Image
-                src={Eye}
-                alt=''
-                width={32}
-                height={32}
-                className='transition-transform duration-300 hover:scale-110 hover:cursor-pointer'
+              <ServicesListModal
+                trigger={
+                  <Image
+                    src={Eye}
+                    alt=''
+                    width={32}
+                    height={32}
+                    className='transition-transform duration-300 hover:scale-110'
+                  />
+                }
               />
               <span className='font-cursive absolute left-full ml-1 whitespace-nowrap text-base'>
                 clique pour voir nos tarifs
               </span>
             </div>
           </article>
-          <article className='__responsive-bg-checker flex-start flex h-80 flex-col items-center justify-center gap-y-4 px-16 py-6 md:w-1/2 xl:w-1/3'>
+          <article className='__responsive-bg-checker flex flex-col items-center justify-start gap-y-4 px-16 py-6'>
             <Image src={Zone} alt='' width={48} height={48} />
             <h2 className='text-lg font-bold'>Zone de service</h2>
             <p>
@@ -106,9 +111,9 @@ export default function Home() {
           </article>
         </section>
       </main>
-      <footer className='text-center text-xs'>
+      <footer className='container mx-auto flex flex-col items-center justify-center text-xs'>
         <div className='flex items-center justify-center gap-x-5'>
-          <Image src={Gaja} alt='Logo' width={80} />
+          <Image src={Gaja} alt='Logo Le Reflet de Gaja' width={80} />
           <p>
             EI (Entreprise Individuelle) Clara Launay <br />
             28230 Épernon
