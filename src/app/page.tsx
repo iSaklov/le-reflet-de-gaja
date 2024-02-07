@@ -14,7 +14,7 @@ import Zone from '@/assets/images/icons/mdi_timezone.svg'
 
 export default function Home() {
   return (
-    <div className='font-body flex min-h-screen flex-col items-center justify-start gap-y-6 bg-gaja-gradient px-5 py-10'>
+    <div className='flex min-h-screen flex-col items-center justify-start gap-y-6 bg-gaja-gradient px-5 py-10 font-body'>
       <header className='container mx-auto flex justify-center'>
         <Image src={Logo} alt='Logo le Reflet de Gaja' width={320} />
       </header>
@@ -94,7 +94,7 @@ export default function Home() {
                   />
                 }
               />
-              <span className='font-cursive absolute left-full ml-1 whitespace-nowrap text-base'>
+              <span className='absolute left-full ml-1 whitespace-nowrap font-cursive text-base'>
                 clique pour voir nos tarifs
               </span>
             </div>
