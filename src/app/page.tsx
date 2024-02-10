@@ -14,12 +14,12 @@ import Zone from '@/assets/images/icons/mdi_timezone.svg'
 
 export default function Home() {
   return (
-    <div className='flex min-h-screen flex-col items-center justify-start gap-y-6 bg-gaja-gradient px-5 py-10 font-body'>
+    <div className='flex min-h-screen flex-col items-center justify-start gap-y-8 bg-gaja-gradient px-4 py-10 font-body'>
       <header className='container mx-auto flex justify-center'>
         <Image src={Logo} alt='Logo le Reflet de Gaja' width={320} />
       </header>
       <main className='container mx-auto'>
-        <section className='grid grid-cols-1 text-justify text-deep-purple md:grid-cols-2 xl:grid-cols-3'>
+        <section className='grid auto-rows-fr grid-cols-1 text-justify text-deep-purple md:grid-cols-2 xl:grid-cols-3'>
           <article className='__responsive-bg-checker hidden flex-col items-center justify-start gap-y-4 px-16 py-6 md:flex'>
             <Image src={Developer} alt='' width={48} height={48} />
             <h2 className='text-lg font-bold'>Veuillez patienter</h2>
@@ -94,7 +94,7 @@ export default function Home() {
                   />
                 }
               />
-              <span className='absolute left-full ml-1 whitespace-nowrap font-cursive text-base'>
+              <span className='absolute left-full ml-1 whitespace-nowrap font-cursive'>
                 clique pour voir nos tarifs
               </span>
             </div>
@@ -111,7 +111,7 @@ export default function Home() {
           </article>
         </section>
       </main>
-      <footer className='container mx-auto flex flex-col items-center justify-center text-xs'>
+      <footer className='container mx-auto flex flex-col items-center justify-start text-xs'>
         <div className='flex items-center justify-center gap-x-5'>
           <Image src={Gaja} alt='Logo Le Reflet de Gaja' width={80} />
           <p>
