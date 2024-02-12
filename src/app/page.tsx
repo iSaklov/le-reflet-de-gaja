@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import ServicesListModal from '@/components/dev-placeholder/ServicesListModal'
+import CustomDevAlert from '@/components/UI/CustomDevAlert'
 import Logo from '@/assets/images/logo_home.svg'
 import Gaja from '@/assets/images/logo_gaja.svg'
 import Developer from '@/assets/images/icons/material-symbols-light_developer-board-sharp.svg'
@@ -121,6 +122,16 @@ export default function Home() {
         </div>
         <p>© 2024 Le Reflet de Gaja. Tous droits réservés.</p>
       </footer>
+      <CustomDevAlert
+        title='Veuillez patienter'
+        icon={Developer}
+        className='fixed bottom-0 px-2 pb-2 text-justify md:hidden'
+      >
+        <p>
+          Ce site est actuellement en construction. Une page complète sera
+          disponible très bientôt. Merci pour votre patience.
+        </p>
+      </CustomDevAlert>
     </div>
   )
 }

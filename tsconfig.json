@@ -27,6 +27,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next.config.mjs",
+    "src/app/context/MyPopContext.tsx",
   ],
   "exclude": ["node_modules"],
 }

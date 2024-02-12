@@ -5,6 +5,7 @@ import {
   Annie_Use_Your_Telescope,
 } from 'next/font/google'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
+import { MyPopProvider } from '@/context/MyPopContext'
 import './globals.css'
 
 const antic_didone = Antic_Didone({
@@ -63,7 +64,9 @@ export default function RootLayout({
       className={`${antic_didone.variable} ${rajdhani.variable} ${annie_use_your_telescope.variable}`}
     >
       <body>
-        <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+        <AppRouterCacheProvider>
+          <MyPopProvider>{children} </MyPopProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   )
