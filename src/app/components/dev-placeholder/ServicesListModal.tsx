@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Modal from '@mui/material/Modal'
 import Backdrop from '@mui/material/Backdrop'
 import Fade from '@mui/material/Fade'
-import Alert from '@mui/material/Alert'
 import CustomDevAlert from '@/components/UI/CustomDevAlert'
 import { classNames } from '@/utils/classNames'
 import Logo from '@/assets/images/logo_gaja.svg'
@@ -175,7 +174,7 @@ export default function ServicesListModal({ trigger }: ServicesListModalProps) {
               <Image
                 src={Vector}
                 alt=''
-                className='absolute top-1/2 h-4/6 w-min -translate-y-1/2 transform md:left-1/2 md:-translate-x-1/2'
+                className='absolute top-1/2 h-4/6 w-auto -translate-y-1/2 transform md:left-1/2 md:-translate-x-1/2'
               />
             </div>
             <span className='text-justify font-body text-sm font-semibold'>

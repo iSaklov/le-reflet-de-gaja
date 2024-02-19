@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import Alert from '@mui/material/Alert'
 import IconButton from '@mui/material/IconButton'
@@ -52,7 +52,6 @@ export default function CustomDevAlert({
               src={icon}
               alt=''
               width={48}
-              height={48}
               className='float-left mr-2 brightness-0 invert'
             />
           )}

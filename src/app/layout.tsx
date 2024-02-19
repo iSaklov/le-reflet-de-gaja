@@ -5,7 +5,6 @@ import {
   Annie_Use_Your_Telescope,
 } from 'next/font/google'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
-import { MyPopProvider } from '@/context/MyPopContext'
 import './globals.css'
 
 const antic_didone = Antic_Didone({
@@ -15,7 +14,7 @@ const antic_didone = Antic_Didone({
 })
 
 const rajdhani = Rajdhani({
-  weight: ['300', '400', '600', '700'],
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--body-font',
   subsets: ['latin'],
 })
@@ -63,10 +62,8 @@ export default function RootLayout({
       lang='fr'
       className={`${antic_didone.variable} ${rajdhani.variable} ${annie_use_your_telescope.variable}`}
     >
-      <body>
-        <AppRouterCacheProvider>
-          <MyPopProvider>{children} </MyPopProvider>
-        </AppRouterCacheProvider>
+      <body className='font-body subpixel-antialiased'>
+        <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>
     </html>
   )

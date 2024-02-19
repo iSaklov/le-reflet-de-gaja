@@ -11,6 +11,16 @@ const config: Config = {
       display: 'var(--display-font)',
       body: 'var(--body-font)',
       cursive: 'var(--cursive-font)',
+      header: [
+        'Lighthaus',
+        'Playfair Display',
+        'Merriweather',
+        'Zilla Slab',
+        'Tangerine',
+        'Lora',
+        'Bitter',
+        'serif',
+      ],
     },
     extend: {
       backgroundImage: {
