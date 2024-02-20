@@ -5,6 +5,8 @@ import {
   Annie_Use_Your_Telescope,
 } from 'next/font/google'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import './globals.css'
 
 const antic_didone = Antic_Didone({

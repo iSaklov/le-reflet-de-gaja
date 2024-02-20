@@ -2,6 +2,7 @@ import Image from 'next/image'
 import ServicesListModal from '@/components/dev-placeholder/ServicesListModal'
 import CustomDevAlert from '@/components/UI/CustomDevAlert'
 import DevHeader from '@/components/dev-placeholder/DevHeader'
+import DevSlider from '@/components/dev-placeholder/DevSlider'
 import Gaja from '@/assets/images/logo_gaja.svg'
 import Developer from '@/assets/images/icons/material-symbols-light_developer-board-sharp.svg'
 import Welcome from '@/assets/images/icons/mdi_human-welcome.svg'
@@ -109,6 +110,9 @@ export default function Home() {
               </p>
             </article>
           </section>
+          <div className='container mx-auto my-24 px-4 md:max-w-lg lg:max-w-xl xl:max-w-2xl'>
+            <DevSlider />
+          </div>
         </main>
         <footer className='container mx-auto flex flex-col items-center justify-start border-t-4 border-double border-zinc-100 px-4 py-12 text-xs'>
           <div className='flex items-center justify-center gap-x-5'>
