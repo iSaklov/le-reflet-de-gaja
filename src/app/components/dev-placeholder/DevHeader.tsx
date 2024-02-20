@@ -30,7 +30,8 @@ export default function DevHeader() {
           alt=''
           fill
           priority
-          className='h-full w-full object-cover'
+          placeholder='blur'
+          className='h-full w-full object-cover object-center'
         />
       </div>
       <div className='container mx-auto flex min-h-screen flex-col  items-center justify-center px-2 md:min-h-[100vh]'>

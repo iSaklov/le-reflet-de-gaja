@@ -114,7 +114,8 @@ export default function Home() {
             <DevSlider />
           </div>
         </main>
-        <footer className='container mx-auto flex flex-col items-center justify-start border-t-4 border-double border-zinc-100 px-4 py-12 text-xs'>
+        <div className='border-t-4 border-double border-zinc-100 ' />
+        <footer className='container mx-auto flex flex-col items-center justify-start px-4 py-12 text-xs'>
           <div className='flex items-center justify-center gap-x-5'>
             <Image src={Gaja} alt='Logo Le Reflet de Gaja' width={80} />
             <p className='text-center'>

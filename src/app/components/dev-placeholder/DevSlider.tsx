@@ -15,42 +15,42 @@ export default function DevSlider() {
         alt=''
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
-        sizes='75vw'
+        sizes='50vw'
       />
       <Image
         src={Img01}
         alt=''
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
-        sizes='75vw'
+        sizes='50vw'
       />
       <Image
         src={Img02}
         alt=''
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
-        sizes='75vw'
+        sizes='50vw'
       />
       <Image
         src={Img03}
         alt=''
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
-        sizes='75vw'
+        sizes='50vw'
       />
       <Image
         src={Img04}
         alt=''
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
-        sizes='75vw'
+        sizes='50vw'
       />
       <Image
         src={Img05}
         alt=''
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
-        sizes='75vw'
+        sizes='50vw'
       />
     </Carousel>
   )
