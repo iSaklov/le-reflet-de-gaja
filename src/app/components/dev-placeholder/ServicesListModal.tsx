@@ -136,39 +136,42 @@ export default function ServicesListModal({ trigger }: ServicesListModalProps) {
               Découvrez la liste détaillée de nos services et les tarifs
               correspondants
             </h3>
-            <div className='relative grid auto-rows-fr grid-cols-1 gap-y-4 rounded bg-white px-4 pb-8 pt-12 text-deep-purple shadow-md md:grid-cols-2 md:gap-x-8'>
+            <ul className='relative grid auto-rows-fr grid-cols-1 gap-y-4 rounded bg-white px-4 pb-8 pt-12 text-deep-purple shadow-md md:grid-cols-2 md:gap-x-8'>
               {servicesData.map(({ name, price, description }) => {
                 const discountedPrice = Math.round(price * 0.7)
 
                 return (
-                  <div
+                  <li
                     key={name}
-                    className='flex flex-col gap-y-1 border-b-2 border-zinc-100 pb-4'
+                    className='flex flex-col gap-y-2 border-b-2 border-zinc-100 pb-4'
                   >
-                    <div className='flex items-end justify-between font-display uppercase'>
-                      <h3>{name}</h3>
-                      <span className='mx-2 flex-auto -translate-y-1.5 border-b border-dotted border-deep-purple' />
-                      <div className='relative'>
-                        <h3
+                    <h3 className='flex flex-wrap items-baseline font-display uppercase before:order-2 before:mx-2 before:flex-grow before:border-b before:border-dotted before:border-current'>
+                      {name}
+                      <span className='relative order-3'>
+                        <span
                           className={classNames(
-                            'absolute transform transition duration-500 ease-in-out',
+                            'absolute transition duration-500 ease-in-out',
                             discountApplied
                               ? '-translate-y-3/4 scale-105 opacity-100'
                               : 'scale-50 opacity-0'
                           )}
-                        >{`${discountedPrice}€`}</h3>
-                        <h3
+                        >
+                          {discountedPrice}€
+                        </span>
+                        <span
                           className={classNames(
                             'transform transition duration-500 ease-in-out',
                             discountApplied
                               ? 'line-through decoration-burgundy-sunset'
                               : ''
                           )}
-                        >{`${price}€`}</h3>
-                      </div>
-                    </div>
-                    <p className='font-body text-sm'>{description}</p>
-                  </div>
+                        >
+                          {price}€
+                        </span>
+                      </span>
+                    </h3>
+                    <p className='text-sm'>{description}</p>
+                  </li>
                 )
               })}
               <Image
@@ -176,7 +179,7 @@ export default function ServicesListModal({ trigger }: ServicesListModalProps) {
                 alt=''
                 className='absolute top-1/2 h-[500px] w-auto -translate-y-1/2 transform md:left-1/2 md:h-[380px] md:-translate-x-1/2 xl:h-[320px]'
               />
-            </div>
+            </ul>
             <span className='text-justify font-body text-sm font-semibold'>
               * Nos tarifs couvrent une séance de massage de 1h. Veuillez
               prévoir jusqu&apos;à 1h30 en tout, incluant le temps pour un bain
