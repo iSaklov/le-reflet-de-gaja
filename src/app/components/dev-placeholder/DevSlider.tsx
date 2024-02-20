@@ -13,44 +13,44 @@ export default function DevSlider() {
       <Image
         src={Img00}
         alt=''
-        layout='responsive'
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
+        sizes='75vw'
       />
       <Image
         src={Img01}
         alt=''
-        layout='responsive'
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
+        sizes='75vw'
       />
       <Image
         src={Img02}
         alt=''
-        layout='responsive'
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
+        sizes='75vw'
       />
       <Image
         src={Img03}
         alt=''
-        layout='responsive'
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
+        sizes='75vw'
       />
       <Image
         src={Img04}
         alt=''
-        layout='responsive'
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
+        sizes='75vw'
       />
       <Image
         src={Img05}
         alt=''
-        layout='responsive'
         placeholder='blur'
         className='h-auto w-full rounded-bl-[400px] rounded-tr-[400px] object-cover'
+        sizes='75vw'
       />
     </Carousel>
   )

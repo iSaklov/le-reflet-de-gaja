@@ -14,12 +14,12 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next",
-      },
+        "name": "next"
+      }
     ],
     "paths": {
-      "@/*": ["./src/app/*"],
-    },
+      "@/*": ["./src/app/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -27,7 +27,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next.config.mjs",
-    "src/app/context/MyPopContext.tsx",
+    "src/app/context/MyPopContext.tsx"
   ],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }

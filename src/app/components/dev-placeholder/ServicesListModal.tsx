@@ -174,7 +174,7 @@ export default function ServicesListModal({ trigger }: ServicesListModalProps) {
               <Image
                 src={Vector}
                 alt=''
-                className='absolute top-1/2 h-4/6 w-auto -translate-y-1/2 transform md:left-1/2 md:-translate-x-1/2'
+                className='absolute top-1/2 h-[500px] w-auto -translate-y-1/2 transform md:left-1/2 md:h-[380px] md:-translate-x-1/2 xl:h-[320px]'
               />
             </div>
             <span className='text-justify font-body text-sm font-semibold'>
