@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   title:
     'Le Reflet de Gaja - Massage Bien-Être à Domicile | Rambouillet, Chartres, Dreux',
   description:
-    'Découvrez Le Reflet de Gaja, où votre bien-être est notre priorité. Offrant une variété de massages bien-être à domicile dans la région de Rambouillet, Chartres, Dreux, et leurs environs. Planifiez votre session de relaxation dès aujourd&apos;hui.',
+    "Découvrez Le Reflet de Gaja, où votre bien-être est notre priorité. Offrant une variété de massages bien-être à domicile dans la région de Rambouillet, Chartres, Dreux, et leurs environs. Planifiez votre session de relaxation dès aujourd'hui.",
   keywords: [
     'Le Reflet de Gaja',
     'massage bien-être à domicile',

@@ -7,7 +7,7 @@ import Backdrop from '@mui/material/Backdrop'
 import Fade from '@mui/material/Fade'
 import CustomDevAlert from '@/components/UI/CustomDevAlert'
 import { classNames } from '@/utils/classNames'
-import Logo from '@/assets/images/logo_gaja.svg'
+import Logo from '@/assets/images/logo.svg'
 import Close from '@/assets/images/icons/carbon_close-filled.svg'
 import Vector from '@/assets/images/vector.svg'
 import InstagramIcon from '@/assets/images/icons/circum_instagram.svg'
@@ -125,7 +125,7 @@ export default function ServicesListModal({ trigger }: ServicesListModalProps) {
               alt='Logo le Reflet de Gaja'
               width={120}
               className={classNames(
-                '-mb-8',
+                'h-auto w-24',
                 discountApplied ? 'animate-pulse' : ''
               )}
             />

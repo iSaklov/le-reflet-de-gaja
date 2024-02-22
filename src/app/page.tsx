@@ -3,7 +3,7 @@ import ServicesListModal from '@/components/dev-placeholder/ServicesListModal'
 import CustomDevAlert from '@/components/UI/CustomDevAlert'
 import DevHeader from '@/components/dev-placeholder/DevHeader'
 import DevSlider from '@/components/dev-placeholder/DevSlider'
-import Gaja from '@/assets/images/logo_gaja.svg'
+import Logo from '@/assets/images/logo.svg'
 import Developer from '@/assets/images/icons/material-symbols-light_developer-board-sharp.svg'
 import Welcome from '@/assets/images/icons/mdi_human-welcome.svg'
 import Phone from '@/assets/images/icons/ph_phone-fill.svg'
@@ -115,9 +115,13 @@ export default function Home() {
           </div>
         </main>
         <div className='border-t-4 border-double border-zinc-100 ' />
-        <footer className='container mx-auto flex flex-col items-center justify-start px-4 py-12 text-xs'>
+        <footer className='container mx-auto flex flex-col items-center justify-start gap-y-4 px-4 py-12 text-xs'>
           <div className='flex items-center justify-center gap-x-5'>
-            <Image src={Gaja} alt='Logo Le Reflet de Gaja' width={80} />
+            <Image
+              src={Logo}
+              alt='Logo Le Reflet de Gaja'
+              className='h-auto w-16'
+            />
             <p className='text-center'>
               EI (Entreprise Individuelle) Clara Launay <br />
               28230 Épernon
