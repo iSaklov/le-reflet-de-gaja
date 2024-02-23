@@ -55,7 +55,7 @@ export default function RootLayout({
       lang='fr'
       className={`${antic_didone.variable} ${rajdhani.variable} ${annie_use_your_telescope.variable} ${lighthaus.variable}`}
     >
-      <body className='font-body subpixel-antialiased'>
+      <body className='select-none font-body subpixel-antialiased'>
         <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>
     </html>

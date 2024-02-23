@@ -1,10 +1,11 @@
 'use client'
 
-import React, { useState, useEffect, ReactNode } from 'react'
+import React, { useState, useEffect, useRef, ReactNode } from 'react'
 import Image from 'next/image'
 import Modal from '@mui/material/Modal'
 import Backdrop from '@mui/material/Backdrop'
 import Fade from '@mui/material/Fade'
+import { servicesData } from '@/datas/servicesData'
 import CustomDevAlert from '@/components/UI/CustomDevAlert'
 import { classNames } from '@/utils/classNames'
 import Logo from '@/assets/images/logo.svg'
@@ -17,58 +18,13 @@ interface ServicesListModalProps {
   trigger: ReactNode
 }
 
-const servicesData = [
-  {
-    name: 'Kobido',
-    price: 79,
-    description: 'Illuminez votre visage avec la finesse japonaise',
-  },
-  {
-    name: 'Réflexologie plantaire thaï',
-    price: 79,
-    description: 'Stimulez vos points de pression pour un bien-être total',
-  },
-  {
-    name: 'Californien',
-    price: 79,
-    description: 'Une douce évasion vers le lâcher-prise, plénitude solaire',
-  },
-  {
-    name: 'Suédois',
-    price: 86,
-    description: 'Libérez les tensions avec des techniques de massage profond',
-  },
-  {
-    name: 'Lomi-Lomi',
-    price: 93,
-    description:
-      "À chaque mouvement, - un bercement puissant évoquant l'âme apaisante d’Hawaï",
-  },
-  {
-    name: 'Balinais',
-    price: 93,
-    description:
-      'Équilibrez votre esprit et votre corps avec des rituels balinais',
-  },
-  {
-    name: 'Ayurvédique',
-    price: 93,
-    description: "Revitalisez votre corps avec l'ancienne sagesse indienne",
-  },
-  {
-    name: 'Femme Enceinte / Bébé',
-    price: 86,
-    description:
-      'Délicatesse et attention, un massage doux pour des moments précieux',
-  },
-]
-
 export default function ServicesListModal({ trigger }: ServicesListModalProps) {
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
   const [discountApplied, setDiscountApplied] = useState(false)
   const [showAlert, setShowAlert] = useState(false)
+  const alertRef = useRef<HTMLDivElement>(null)
 
   const applyDiscount = () => {
     // setDiscountApplied(!discountApplied)
@@ -84,6 +40,12 @@ export default function ServicesListModal({ trigger }: ServicesListModalProps) {
       return () => clearTimeout(timer)
     }
   }, [discountApplied])
+
+  useEffect(() => {
+    if (showAlert && alertRef.current) {
+      alertRef.current.focus()
+    }
+  }, [showAlert])
 
   return (
     <div>
@@ -146,7 +108,7 @@ export default function ServicesListModal({ trigger }: ServicesListModalProps) {
                     className='flex flex-col gap-y-2 border-b-2 border-zinc-100 pb-4'
                   >
                     <h3 className='flex flex-wrap items-baseline font-display uppercase before:order-2 before:mx-2 before:flex-grow before:border-b before:border-dotted before:border-current'>
-                      {name}
+                      <span className='order-1 select-text'>{name}</span>
                       <span className='relative order-3'>
                         <span
                           className={classNames(
@@ -237,47 +199,49 @@ export default function ServicesListModal({ trigger }: ServicesListModalProps) {
               </span>
             </div>
             {showAlert && (
-              <CustomDevAlert title='Restez Connectés' className='mt-4'>
-                <p className='my-4 text-justify'>
-                  Restez à l&apos;écoute pour nos offres spéciales dédiées à{' '}
-                  <span className='relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-deep-purple'>
-                    <span className='relative text-white'>
-                      tous nos clients
-                    </span>
-                  </span>{' '}
-                  en nous suivant sur les réseaux sociaux:
-                </p>
-                <div className='flex items-center justify-center gap-x-10'>
-                  <a
-                    href='https://instagram.com/refletdegaja'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='transition-transform duration-300 hover:scale-110'
-                  >
-                    <Image
-                      src={InstagramIcon}
-                      alt='lien vers Instagram'
-                      width={32}
-                      height={32}
-                      className='brightness-0 invert'
-                    />
-                  </a>
-                  <a
-                    href='https://facebook.com/refletdegaja'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='transition-transform duration-300 hover:scale-110'
-                  >
-                    <Image
-                      src={FacebookIcon}
-                      alt='lien vers Facebook'
-                      width={32}
-                      height={32}
-                      className='brightness-0 invert'
-                    />
-                  </a>
-                </div>
-              </CustomDevAlert>
+              <div ref={alertRef} tabIndex={-1}>
+                <CustomDevAlert title='Restez Connectés' className='mt-4'>
+                  <p className='my-4 text-justify'>
+                    Restez à l&apos;écoute pour nos offres spéciales dédiées à{' '}
+                    <span className='relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-deep-purple'>
+                      <span className='relative text-white'>
+                        tous nos clients
+                      </span>
+                    </span>{' '}
+                    en nous suivant sur les réseaux sociaux:
+                  </p>
+                  <div className='flex items-center justify-center gap-x-10'>
+                    <a
+                      href='https://instagram.com/refletdegaja'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='transition-transform duration-300 hover:scale-110'
+                    >
+                      <Image
+                        src={InstagramIcon}
+                        alt='lien vers Instagram'
+                        width={32}
+                        height={32}
+                        className='brightness-0 invert'
+                      />
+                    </a>
+                    <a
+                      href='https://facebook.com/refletdegaja'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='transition-transform duration-300 hover:scale-110'
+                    >
+                      <Image
+                        src={FacebookIcon}
+                        alt='lien vers Facebook'
+                        width={32}
+                        height={32}
+                        className='brightness-0 invert'
+                      />
+                    </a>
+                  </div>
+                </CustomDevAlert>
+              </div>
             )}
           </div>
         </Fade>
