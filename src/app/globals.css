@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Lighthaus';
-  src:
-    url('/fonts/lighthaus/lighthaus.woff2') format('woff2'),
-    url('/fonts/lighthaus/lighthaus.woff') format('woff'),
-    url('/fonts/lighthaus/lighthaus.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -93,5 +83,14 @@ body {
     .__responsive-bg-checker:nth-child(even) {
       background-color: #f4f4f5; /* Even items have a Zinc-100 background */
     }
+  }
+
+  /* Customized colors for slick-dots in react-slick */
+  .slick-dots.__my-dots li button:before {
+    color: white;
+  }
+
+  .slick-dots.__my-dots li.slick-active button:before {
+    color: white;
   }
 }
