@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import {
   antic_didone,
   rajdhani,
@@ -43,6 +43,56 @@ export const metadata: Metadata = {
     'massage bébé',
   ],
   robots: 'index, follow',
+  generator: 'Next.js',
+  applicationName: 'Le Reflet de Gaja',
+  referrer: 'no-referrer-when-downgrade',
+  authors: [
+    { name: 'iSaklov', url: 'https://www.linkedin.com/in/oleg-smaliakou/' },
+  ],
+  creator: 'iSaklov',
+  publisher: 'iSaklov',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://www.refletdegaja.fr'),
+  alternates: {
+    canonical: '/',
+    // languages: {
+    //   'fr-FR': '/fr-FR',
+    //   'en-US': '/en-US',
+    // },
+  },
+  icons: {
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      new URL('/icon.png', 'https://www.refletdegaja.fr'),
+      {
+        url: '/android-chrome-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: ['/favicon-32x32.png'],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/mstile-144x144.png', sizes: '144x144', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#611554' },
+    ],
+  },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  // maximumScale: 1,
+  // userScalable: false,
+  // Also supported by less commonly used
+  // interactiveWidget: 'resizes-visual',
 }
 
 export default function RootLayout({
