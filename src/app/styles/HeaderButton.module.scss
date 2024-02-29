@@ -1,0 +1,87 @@
+@use './variables.module.scss' as vars;
+// Variable settings
+$mix-percent-default: 15% !default;
+$btn-width: 240px !default;
+$btn-height: 60px !default;
+$btn-full: $btn-height + $btn-width !default;
+$btn-half: $btn-full/2 !default;
+$bg-color: #eeeeee !default;
+
+// Functions
+// Mix white with another color
+@function tint($color, $percent: $mix-percent-default) {
+  @return mix(white, $color, $percent);
+}
+
+// Mix black with another color
+@function shade($color, $percent: $mix-percent-default) {
+  @return mix(black, $color, $percent);
+}
+
+// Mixins
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Button Styles
+.btn {
+  @include size(100%, $btn-height);
+  max-width: $btn-width;
+  line-height: $btn-height;
+  color: white;
+
+  &:before,
+  &:after,
+  & > span:before,
+  & > span:after {
+    content: '';
+    @include absolute(0, null, null, 0);
+    @include size(100%, 0);
+    z-index: -10;
+    transition: 0.4s ease-in-out;
+  }
+
+  &:after,
+  & > span:before {
+    top: auto;
+    bottom: 0;
+  }
+
+  &:before,
+  &:after {
+    background-color: rgba(vars.$burgundy-sunset, 0.5);
+  }
+
+  & > span:before,
+  & > span:after {
+    background-color: rgba(vars.$deep-purple, 0.5);
+    transition-delay: 0.4s;
+  }
+
+  &:hover {
+    &:before,
+    &:after,
+    & > span:before,
+    & > span:after {
+      height: $btn-height;
+    }
+  }
+
+  &:active {
+    background-image: linear-gradient(
+      to right,
+      vars.$deep-purple,
+      vars.$burgundy-sunset,
+      vars.$deep-purple
+    );
+  }
+}

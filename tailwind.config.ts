@@ -11,6 +11,7 @@ const config: Config = {
       display: 'var(--display-font)',
       body: 'var(--body-font)',
       cursive: 'var(--cursive-font)',
+      header: 'var(--header-font)',
     },
     extend: {
       backgroundImage: {
@@ -22,6 +23,9 @@ const config: Config = {
       colors: {
         'deep-purple': '#470960',
         'burgundy-sunset': '#7C2248',
+      },
+      fontSize: {
+        none: ['0px', '0px'],
       },
     },
   },

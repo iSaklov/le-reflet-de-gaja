@@ -30,4 +30,67 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotateY-180 {
+    transform: rotateY(180deg);
+  }
+
+  .rotateX-180 {
+    transform: rotateX(180deg);
+  }
+
+  /* Custom class for adaptive background color alternation */
+  /* This custom class `.__responsive-bg-checker` is designed to implement an adaptive background color alternation strategy across different screen sizes. It applies a Zinc-100 background for odd-numbered items and a white background for even-numbered items by default. Through media queries, it adjusts the pattern to create a checkerboard effect on medium (md:) devices by alternating background colors every two items, and returns to the standard alternation on extra large (xl:) devices, accommodating the layout changes with different numbers of items per row. */
+  .__responsive-bg-checker {
+    background-color: #f4f4f5; /* Zinc-100 background for odd-numbered items by default */
+  }
+
+  .__responsive-bg-checker:nth-child(even) {
+    background-color: #ffffff; /* Background for even items by default */
+  }
+
+  /* Media queries for md: devices */
+  @media (min-width: 768px) {
+    /* Checkerboard logic for two items per row */
+    .__responsive-bg-checker:nth-child(4n + 1),
+    .__responsive-bg-checker:nth-child(4n + 4) {
+      background-color: #ffffff; /* Start with a white background */
+    }
+    .__responsive-bg-checker:nth-child(4n + 2),
+    .__responsive-bg-checker:nth-child(4n + 3) {
+      background-color: #f4f4f5; /* Next two items have a Zinc-100 background */
+    }
+  }
+
+  /* Media queries for xl: devices */
+  @media (min-width: 1280px) {
+    /* Returning to alternate backgrounds per item starting with white */
+    .__responsive-bg-checker:nth-child(odd) {
+      background-color: #ffffff; /* Odd items have a white background */
+    }
+    .__responsive-bg-checker:nth-child(even) {
+      background-color: #f4f4f5; /* Even items have a Zinc-100 background */
+    }
+  }
+
+  /* Customized colors for slick-dots in react-slick */
+  .slick-dots.__my-dots li button:before {
+    color: white;
+  }
+
+  .slick-dots.__my-dots li.slick-active button:before {
+    color: white;
+  }
 }
